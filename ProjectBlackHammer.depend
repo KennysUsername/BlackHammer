@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1559839238 source:f:\coding\github\blackhammer\blackhammer\main.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+
