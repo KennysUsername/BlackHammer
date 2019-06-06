@@ -5,6 +5,7 @@ using namespace std;
     //Index
     void LootRandomizer();
 
+    int i;
 
 int main()
 {
@@ -38,7 +39,29 @@ int main()
 
     void LootRandomizer()
     {
-        cout << "What to do?" << endl;
+        //Note for section
+        //LootValue is used for how many times the randomizer occurs
+        //Decider should add a random string from Rarity with Type to output the Answer
+
+        string Rarity[] = {"Common ", "Uncommon ", "Rare ", "Legendary ", "Mystic "};
+        string Type[] = {"Weapon", "Armor", "Item"};
+
+        cout << " " << endl;
+        cout << "Input loot amount" << endl;
+
+        //Input Repeat amount
+        int LootValue;
+        cin >> LootValue
+
+        int i = 0;
+        while (i < LootValue + 1)
+        {
+
+        cout << Rarity[rand() % Rarity.length()] + Type[Rand() % Type.length()]
+        i++
+
+        }
+
     }
 
 
