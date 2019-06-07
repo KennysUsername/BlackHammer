@@ -10,6 +10,7 @@ using namespace std;
     void Choice();
     void Restart();
     void Close();
+    void Links();
 
 int main()
 {
@@ -19,7 +20,7 @@ int main()
     cout << "(enter number for input)" << endl;
     cout << "(1) Loot Randomizer" << endl;
     cout << "(2) Roll Dice" << endl;
-    cout << "(3)" << endl;
+    cout << "(3) View Document Links" << endl;
 
 
     int Input1 = 0;
@@ -41,7 +42,7 @@ int main()
         break;
 
         case 3:
-        cout << "What to 3do?" << endl;
+        Links();
         break;
     }
 
@@ -157,6 +158,16 @@ void Choice()
 
 }
 
+void Links()
+{
+    cout << "https://docs.google.com/spreadsheets/d/18s87BkDlKK7UIxPM2VUmC1e_A7D49zWFOPXA9vhOzJM/edit?usp=sharing" << endl;
+    cout << " " << endl;
+    cout << " " << endl;
+
+    Choice();
+
+}
+
 void Restart()
 {
 
@@ -170,6 +181,3 @@ void Close()
     cout << " " << endl;
     cout << "Closing" << endl;
 }
-
-
-
