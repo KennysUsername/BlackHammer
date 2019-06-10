@@ -1,3 +1,4 @@
+#include "LootRandomizer.h"
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
@@ -49,22 +50,14 @@ int main()
 }
 
 void LootRandomizer()
-    {
+{
+
         //Note for section
         //LootValue is used for how many times the randomizer occurs
         //Decider should add a random string from Rarity with Type to output the Answer
 
-        //Test
-        //cout << Rarity[1] + Type[1] << endl;
-
-
-        //random number generator
-
-
         string Rarity[] = {"Common ", "Uncommon ", "Rare ", "Legendary ", "Mystic "};
         string Type[] = {"Weapon", "Armor", "Item"};
-
-
 
         cout << " " << endl;
         cout << "Input loot amount" << endl;
@@ -73,11 +66,17 @@ void LootRandomizer()
         int LootValue;
         cin >> LootValue;
 
+        int i = 0;
+        while(i < LootValue + 1)
+        {
         //randomizer, holds p1 as Rarity and p2 as Item Type
         srand(time(0));
         int Percentage = rand() % 100 + 1;
+        int Percentage2 = rand() % 100 + 1;
         string p1;
         string p2;
+
+        //Rarity Rolls
 
         //common (60% - 100%) (40%)
         if (Percentage > 60)
@@ -103,11 +102,34 @@ void LootRandomizer()
         p1 = Rarity[3];
         }
 
-        cout << p1 << endl;
+        //Type Rolls
 
-        Choice();
+        //Weapon (60% - 100%) (40%)
+        if (Percentage2 > 33)
+        {
+        p2 = Type[0];
+        }
 
-    }
+        //Armor (60% - 100%) (40%)
+        if (Percentage2 > 66)
+        {
+        p2 = Type[1];
+        }
+
+        //Item (60% - 100%) (40%)
+        if (Percentage2 > 99)
+        {
+        p2 = Type[2];
+        }
+
+        cout << p1 + p2 << endl;
+        i++;
+
+        }
+
+    Choice();
+
+}
 
 void RollDice()
 {
@@ -178,6 +200,9 @@ void Restart()
 
 void Close()
 {
+
     cout << " " << endl;
     cout << "Closing" << endl;
+
+
 }

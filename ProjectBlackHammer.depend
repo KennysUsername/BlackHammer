@@ -1,6 +1,15 @@
 # depslib dependency file v1.0
-1559885899 source:f:\coding\github\blackhammer\blackhammer\main.cpp
+1560129029 source:f:\coding\github\blackhammer\blackhammer\main.cpp
+	"LootRandomizer.h"
 	<iostream>
 	<cstdlib>
 	<ctime>
+
+1560128515 source:f:\coding\github\blackhammer\blackhammer\lootrandomizer.cpp
+	"LootRandomizer.h"
+	<cstdlib>
+	<ctime>
+
+1560128515 f:\coding\github\blackhammer\blackhammer\lootrandomizer.h
+	<iostream>
 
